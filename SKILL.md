@@ -3,7 +3,7 @@ name: banye-illustration
 description: >
   单一角色配图 Skill —— 只能生成「般叶（Banye）」形象的怪诞手绘风格配图。
   输入中文文章正文，自动产出 16:9（可指定任意比例）的怪诞手绘插画，
-  主角固定为般叶（银白飘逸发、不对称银环、银项链、Q版大头、白西装、痞帅设计师）。
+  主角固定为般叶（银白普通短发、不对称银环、银项链、Q版大头、白西装、痞帅设计师）。
   使用触发词：配图 / 给我般叶配图 / 帮我配图 / illustration。
 ---
 
@@ -21,12 +21,32 @@ description: >
 本 Skill **只能**生成般叶形象，不使用任何其它角色 IP：
 
 - 角色：般叶（Banye），「痞帅的设计师」，Q 版大头（头身比约 1:1.3）
-- 银白飘逸中长发、不戴眼镜、黑色上挑眼线
+- 银白普通短发（不飘逸）、不戴眼镜、黑色上挑眼线
 - 左耳 1 枚银环 + 右耳 4 枚银环（不对称核心识别点）+ 银色链条项链
 - 默认白色西装套装；多套穿搭（白西装 / 礼服 / 牛仔）
 - 全部锚点、锁色、动作库见 `references/ip/banye/ip.md`
 
 每次生图都会自动加载般叶的设定图 + 校准图 + 锚点，**无需指定角色**。
+
+---
+
+## 换装路由（按关键词自动选服装）
+
+般叶**身份锚（银白发/左1右4银环/银项链/无眼镜/黑眼线/圆润少年脸/Q版大头）永远不变，权重最高**；只有衣服随关键词切换。
+
+| 你说的话 | 自动选用服装 | 服装参考图（生成后入库才生效） |
+|----------|--------------|-------------------------------|
+| 不指定 / 白西装 | 白西装（默认） | `outfits/white_suit/reference.png` |
+| 般叶穿短袖 | 短袖 | `outfits/short_sleeve/reference.png` |
+| 般叶穿背心 | 背心 | `outfits/vest/reference.png` |
+| 般叶穿黑西装 | 黑西装 | `outfits/black_suit/reference.png` |
+| 般叶穿礼服 | 礼服 | `outfits/tuxedo/reference.png` |
+| 般叶牛仔风 | 牛仔 | `outfits/denim/reference.png` |
+| 般叶潮流/流行 | 流行 | `outfits/street/reference.png` |
+| 般叶韩系 | 韩系 | `outfits/korean/reference.png` |
+| 般叶杀马特 | 杀马特/视觉系 | `outfits/visual/reference.png` |
+
+> 完整关键词映射与服装描述见 `references/ip/banye/ip.md`「衣橱库」。服装参考图由用户按提示词自生成并发回，我存入 `outfits/{id}/` 后，换装可靠性拉满。
 
 ---
 

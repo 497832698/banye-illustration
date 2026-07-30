@@ -20,14 +20,14 @@
 1. 每次生图传 **设定图 + 校准图 1 张**（共 2 张）
 2. 设定图管锚点色（银发、耳环、项链、比例）；校准图管「手绘线稿里仍像同一人」
 3. 校准图**不**承担构图/标注示范——那些由 shot-config 当次决定
-4. prompt 开头：`Match Banye to BOTH references — silver-white flowing hair, NO glasses, asymmetric silver hoops (left ear ONE, right ear FOUR), silver chain necklace, big-head chibi ~1:1.3, default white suit.`
+4. prompt 开头：`Match Banye to BOTH references — silver-white short/medium regular hair (NOT long/flowing), NO glasses, asymmetric silver hoops (left ear ONE, right ear FOUR), silver chain necklace, big-head chibi ~1:1.3, default white suit.`
 
 ---
 
 ## 锚点（6 个，丢任一个就不算般叶）
 
-1. **银白飘逸中长发**：蓬松、微卷、飘逸感强，刘海偏分（非直硬短发、非金发）
-2. **多套穿搭**：默认白西装套装 / 礼服装 / 牛仔装（三视图与周边图可辨）
+1. **银白普通短发**：及耳/颌线的普通清爽短发，顺贴有轻微层次与刘海，不飘逸不炸毛（非长发、非蓬松飘逸、非金发）
+2. **多套穿搭（衣橱库见下）**：白西装(默认)/短袖/背心/黑西装/礼服/牛仔/流行/韩系/杀马特；**仅衣服变化，发色与配饰(银发/不对称耳环/项链)永远不变**
 3. **不对称银环 + 项链**：**不戴眼镜**；左耳 **1 枚**小银环、右耳 **4 枚**小银环（左右不对称是核心识别点）；银色链条项链
 4. **Q 版大头比例**：头身比约 **1:1.3**（约 2–3 头身），非成人正常比例
 5. **黑色眼线**：上挑黑色眼线，强化「瘾帅」冷感
@@ -37,20 +37,46 @@
 
 ---
 
+## 衣橱库（OUTFIT_LIBRARY）
+
+> **身份锚（银发 / 左1右4银环 / 银项链 / 黑眼线 / 无眼镜 / Q版大头 / 痞帅脸 / 圆润少年脸）全部锁定不变，权重最高；只换衣服/鞋。**
+> 路由：用户提示词命中某关键词 → 选用对应服装 + 该服装的校准参考图；无关键词 → 默认白西装。
+
+| id | 服装 | 触发关键词 | 服装段（进 prompt，中） | 参考图路径（用户生成后填入） | 状态 |
+|----|------|-----------|------------------------|------------------------------|------|
+| white_suit | 白西装（默认） | 白西装/西装/默认 | 米白/奶油色西装套装（外套+长裤）+白色内搭 | 设定图 reference-character.png（默认即白西装） | ✅ 默认已含 |
+| short_sleeve | 短袖 | 短袖/半袖/T恤 | 宽松纯色短袖T恤（浅灰/黑/白）+休闲长裤或牛仔裤 | assets/ip/banye/outfits/short_sleeve/reference.png | ✅ 已入库 |
+| vest | 背心 | 背心/无袖/坎肩 | 白色或黑色工字背心+运动短裤或阔腿裤 | assets/ip/banye/outfits/vest/reference.png | ✅ 已入库 |
+| black_suit | 黑西装 | 黑西装/黑色西装/暗黑西装 | 全黑西装套装（黑外套+黑西裤）+黑或白内搭 | assets/ip/banye/outfits/black_suit/reference.png | ✅ 已入库 |
+| tuxedo | 礼服 | 礼服/正装/燕尾服/晚礼服 | 黑色/藏青丝绒礼服套装+领结或领带+皮鞋 | assets/ip/banye/outfits/tuxedo/reference.png | ✅ 已入库 |
+| denim | 牛仔 | 牛仔/丹宁/美式休闲 | 牛仔外套或牛仔衬衫+牛仔裤全牛仔（可做旧） | assets/ip/banye/outfits/denim/reference.png | ✅ 已入库 |
+| street | 流行/潮流 | 流行/潮流/街头/hiphop/潮牌 | 宽松oversize卫衣+工装裤+运动鞋；可加棒球帽 | assets/ip/banye/outfits/street/reference.png | 待补 |
+| korean | 韩系 | 韩系/韩风/清爽/温柔 | 米色针织开衫+白T+直筒休闲裤 | assets/ip/banye/outfits/korean/reference.png | ✅ 已入库 |
+| visual | 杀马特/视觉系 | 杀马特/视觉系/视觉/夸张 | 发型保持普通银白短发不变（不炸毛不染色）+黑色铆钉皮衣或破洞卫衣+多层金属链+护腕+臂环；眼妆加重 | assets/ip/banye/outfits/visual/reference.png | ✅ 已入库 |
+
+**杀马特特别约束**：发色绝不染色（仍银白），仅通过蓬乱层次 + 夸张服装/配饰 + 强烈姿态营造视觉冲击，以保般叶识别度。
+
+**校准参考图（用户生成后）**：每套服装的 `reference.png` 由用户按本表提示词自生成并回传；入库后，配图时除设定图+校准图外，额外附上对应服装参考图，把「换装不认错人」的可靠性拉满。
+
+---
+
 ## 填入 `{IP_DESC}`
 
 ```
+[CRITICAL — IDENTITY LOCK: the 8 anchors below are NON-NEGOTIABLE and have the HIGHEST priority. They MUST be preserved exactly even when outfit/clothing changes and even over any style instruction. The character must remain recognizable as Banye regardless of clothing.]
+
 [Match reference-character.png AND reference-outfits.png for Banye's appearance]
 Banye: chibi/cartoon character, head-to-body ratio about 1:1.3 (big-head proportion, roughly 2-3 heads tall, NOT normal adult proportion);
-silver-white long flowing hair, voluminous and wispy (NOT stiff, NOT short, NOT gold/yellow, NOT gray-washed);
+silver-white short/medium regular hair, neat with slight layering (NOT long/flowing, NOT voluminous/wispy, NOT gold/yellow, NOT gray-washed);
 NO glasses;
 black winged eyeliner on upper lids, cool roguish "bad-boy handsome" look;
 gray/silver eyes;
 LEFT ear: exactly ONE small silver hoop; RIGHT ear: exactly FOUR small silver hoops (ASYMMETRIC — core identity signal, must be preserved);
 silver chain necklace on neck;
-outfits (multiple): default white suit set, plus formal dress and denim outfit;
+face shape: round-soft boyish face;
+outfits (multiple, see 衣橱库): white suit (default), short-sleeve tee, tank top, black suit, tuxedo, denim, streetwear, Korean-casual, shamate/scene; CURRENT OUTFIT is chosen by user keyword (default = white suit); ONLY the clothing differs — anchors above NEVER change;
 expressions alternate between exaggerated/dramatic and calm/quiet.
-Keep exact hairstyle, earring count and placement, necklace, and proportions from reference; only outlines become sketchy.
+Keep exact hairstyle, earring count and placement, necklace, face shape, and proportions from reference; only outlines become sketchy.
 ```
 
 ---
@@ -60,13 +86,15 @@ Keep exact hairstyle, earring count and placement, necklace, and proportions fro
 > quirky-sketch 下、$IP=banye 时追加在 `{STYLE_ADAPT}` 之后。其它 IP 若无此节则留空。
 
 ```
-Banye-specific identity lock:
-- Silver-white FLOWING hair (NOT yellow, NOT gold, NOT gray-washed, NOT stiff/short)
+Banye-specific identity lock (HIGHEST PRIORITY — apply before and above any outfit/clothing instruction):
+- Silver-white SHORT/REGULAR hair (NOT long/flowing, NOT yellow, NOT gold, NOT gray-washed)
 - LEFT ear ONE silver hoop + RIGHT ear FOUR silver hoops — ASYMMETRY must be preserved exactly
 - Silver chain necklace must be present
-- Default outfit = white suit; scene accent colors must NOT tint, replace, or bleed into hair / suit / necklace
+- Round-soft boyish face shape must be preserved
+- Default outfit = white suit; when user specifies an outfit keyword (see 衣橱库), use THAT outfit instead and state it explicitly; scene accent colors must NOT tint, replace, or bleed into hair / outfit / necklace
 - Head-to-body ratio ~1:1.3 big-head chibi — do NOT draw as normal adult proportion
 - NO glasses (character is specified without glasses)
+- Black winged eyeliner on upper lids — keep
 ```
 
 ---
@@ -75,7 +103,7 @@ Banye-specific identity lock:
 
 **锚点走形**
 
-- 头发变黄 / 金 / 灰白，或变短变直失去飘逸感
+- 头发变黄 / 金 / 灰白，或变成飘逸长发/炸毛（应保持普通短发）
 - 耳环数量或位置错（尤其「左 1 右 4」不对称被破坏、数量减少）
 - 项链缺失 / 银链变金链
 - 头身比画成正常成人比例（非 Q 版大头 1:1.3）

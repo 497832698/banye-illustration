@@ -12,6 +12,7 @@
 ```
 {REF_IMAGE}
 {IP_DESC}              ← 紧接参考图，先于风格段
+{OUTFIT_DESC}          ← 衣橱库按关键词选当前服装；默认白西装
 {STYLE_DNA}
 {WHITESPACE_DESC}
 {STYLE_ADAPT}          ← 来自 styles/quirky-sketch.md，通用层
@@ -39,6 +40,7 @@
 | `{STYLE_ADAPT}` | `styles/quirky-sketch.md` → "风格适配指令" | 通用层，不写死具体锚点 |
 | `{IP_STYLE_ADAPT}` | `ip/banye/ip.md` → "填入 `{IP_STYLE_ADAPT}`" | 般叶专属锁色 |
 | `{IP_DESC}` | `ip/banye/ip.md` → "填入 `{IP_DESC}`" | 般叶外貌描述 |
+| `{OUTFIT_DESC}` | `ip/banye/ip.md` → "衣橱库（OUTFIT_LIBRARY）" | 按用户服装关键词选当前服装；无关键词用默认白西装 |
 | `{COMPOSITION_DESC}` | `shot-config.md` → Shot「构图」 | 从构图库选择或自定义 |
 | `{MESSAGE_DESC}` | `shot-config.md` → Shot「核心信息」 | 先定义内容表意，再决定画面 |
 | `{SUBJECT_DESC}` | `shot-config.md` → Shot「隐喻」 | 具象物件 + 结构；见下方填法 |
@@ -61,10 +63,11 @@
 2. **必传** `assets/ip/banye/examples/quirky-sketch/banye-sample.png`（校准图：锁怪诞手绘里的般叶线稿质感）
 3. 两张都进上下文后再生图；prompt 开头强调 Match BOTH references + 般叶锚点关键词
 4. 校准图缺失 → **当次按 single 处理**（仅设定图），并提示补回校准图
+5. **换装时额外传对应服装参考图**（见下方）：用户提示词命中某服装关键词 → 若 `assets/ip/banye/outfits/{id}/reference.png` 已存在，作为第三张参考图传入；该图只示范「衣服/鞋」，不覆盖身份锚
 
 **`ref_mode: single`（仅设定图）：** 只传 `reference-character.png`；prompt 开头 Match character sheet（无 BOTH）。
 
-**分工**：设定图 + 校准图 → 般叶身份与线稿质感；风格词 → 场景线稿与色纪律。禁止在 dual 下只传一张却声称完成。
+**分工**：设定图 + 校准图 → 般叶身份与线稿质感；服装参考图 → 仅当次服装造型；风格词 → 场景线稿与色纪律。禁止在 dual 下只传一张却声称完成。
 
 ### `{IP_DESC}`
 
@@ -74,6 +77,16 @@
 
 - 读 `ip/banye/ip.md`「填入 `{IP_STYLE_ADAPT}`」— 般叶专属锁色（银发、不对称耳环、项链、白西装、比例）
 - 锚点优先：外貌/配饰/比例以参考图为准；`{STYLE_ADAPT}` 管线稿质感；`{IP_STYLE_ADAPT}` 管般叶专属锁色
+
+### `{OUTFIT_DESC}`
+
+- 读 `ip/banye/ip.md`「衣橱库（OUTFIT_LIBRARY）」
+- **路由**：扫描用户提示词，命中关键词 → 取该服装英文描述填入，并记下其 `id`（用于第 5 步传对应服装参考图）；未命中 → 用默认「white suit set」（`id=white_suit`）
+- 格式（英文）：
+  `Current outfit: <英文服装描述 from 衣橱库>. Keep ALL identity anchors (silver-white short/medium regular hair, asymmetric silver hoops left-1/right-4, silver chain necklace, NO glasses, black winged eyeliner, round-soft boyish face, chibi ~1:1.3) UNCHANGED and HIGHEST PRIORITY; ONLY the clothing differs.`
+- 多服装关键词同时出现 → 取第一个命中的；不要在一张图里混穿多套（除非用户明确要求）
+- 杀马特：发色仍银白，仅服装/配饰/姿态极端化
+- **服装参考图（用户生成后可用）**：若 `assets/ip/banye/outfits/{id}/reference.png` 存在，则在第 5 步作为第三张参考图传入，强化「该套衣服的具体造型」；其作用仅限服装，不覆盖任何身份锚
 
 ### `{COMPOSITION_DESC}`
 
@@ -175,7 +188,7 @@ soft blue main scene accent; soft orange at most 2 small highlights only; no ora
 **般叶专属负向约束（来自 `ip/banye/ip.md`）：**
 
 ```
-NOT yellow / gold / gray-washed hair for Banye; keep silver-white flowing hair;
+NOT yellow / gold / gray-washed hair for Banye; keep silver-white short/medium regular hair (NOT long/flowing);
 NOT symmetric earrings — Banye is LEFT ear ONE hoop + RIGHT ear FOUR hoops (asymmetric);
 NOT missing the silver chain necklace;
 NOT normal adult body proportion — keep chibi big-head ~1:1.3;

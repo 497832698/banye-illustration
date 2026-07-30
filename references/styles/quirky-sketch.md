@@ -138,7 +138,7 @@ IMPORTANT style adaptation for character:
 {STYLE_DNA}
 {STYLE_ADAPT}
 aspect ratio 16:9, landscape
-Match Banye identity to reference-character.png: silver-white flowing hair (NOT gold/gray), NO glasses, LEFT ear ONE silver hoop + RIGHT ear FOUR silver hoops (asymmetric), silver chain necklace, big-head chibi ~1:1.3, default white suit.
+Match Banye identity to reference-character.png: silver-white short/medium regular hair (NOT long/flowing, NOT gold/gray), NO glasses, LEFT ear ONE silver hoop + RIGHT ear FOUR silver hoops (asymmetric), silver chain necklace, big-head chibi ~1:1.3, default white suit.
 Full-body character visible (sitting or standing ok), quirky-sketch style sample — wobbly ink lines, expressive rough sketch.
 Canonical vibe-coding style mirror scene: 2-4 objects from {laptop, mug, plant, simple desk line art}; soft blue accents, soft orange at most 2 small highlights.
 White background with generous whitespace.
