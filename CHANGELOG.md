@@ -1,5 +1,13 @@
 # Changelog · banye-illustration
 
+> 版本说明：内部开发经历了 v1.0（派生）/ v1.1（衣橱库）。**首个 GitHub 发布标签为 v0.1.0**（2026-07-31），功能等价于下方 v1.1。
+
+## v0.1.0 · 2026-07-31 · 首个 GitHub 发布标签
+
+- 首个公开发布；功能等价于内部 v1.1
+- 安全：移除 `.git/config` 明文 token（改用 gh 凭据助手）；`reference-character` 转存为真正 PNG
+- 文档：README 补全 5 项（问题 / 功能 / 安装 / 用法 / 示例）；LICENSE 署名更正为般叶 (Banye)
+
 ## v1.0 · 2026-07-30
 
 派生自 `gimi-illustration`（Public 2.0 / 内部 4.7），定向精简为单一角色配图 Skill：
