@@ -105,10 +105,15 @@ git clone https://github.com/497832698/banye-illustration.git \
 
 ```
 banye-illustration/
-├── SKILL.md                      入口与工作流
+├── SKILL.md                      入口与工作流（WorkBuddy 专用）
+├── UNIVERSAL-GUIDE.md            非 WorkBuddy 通用使用指南（任意 AI 生图工具）
 ├── IP-NOTICE.md                  般叶角色归属说明
 ├── LICENSE                       MIT
 ├── CHANGELOG.md                  版本记录
+├── portable/                    可复制提示词（非 WorkBuddy 用户直接用）
+│   ├── base-prompt.txt           自包含基础提示词（含 {OUTFIT} 占位）
+│   ├── prompts-en.txt            8 套服装完整英文提示词，直接复制
+│   └── prompts-zh.txt            中文说明 + 服装关键词映射
 ├── references/
 │   ├── prompt-template.md         Prompt 组装器（含换装路由 {OUTFIT_DESC}）
 │   ├── composition-patterns.md   构图模式库
@@ -130,6 +135,18 @@ banye-illustration/
                 ├── white_suit/  short_sleeve/  vest/  black_suit/
                 ├── tuxedo/  denim/  korean/  visual/
 ```
+
+## 不用 WorkBuddy 也能用
+
+本 Skill 原生为 WorkBuddy 设计，但**不依赖 WorkBuddy 也能用**——它本质是一套
+「角色锚点锁定 + 怪诞手绘风格 + 8 套换装参考图 + 提示词模板」。任意支持
+**图片参考 + 文本提示词**的 AI 生图工具（ChatGPT/DALL·E、通义万相、Midjourney、
+Stable Diffusion + IP-Adapter 等）都能复现同样效果。
+
+非 WorkBuddy 用户请看 **[`UNIVERSAL-GUIDE.md`](./UNIVERSAL-GUIDE.md)**，并直接复制
+[`portable/`](./portable/) 里的提示词 + 上传 `assets/` 里的参考图即可。
+
+---
 
 ## 想改般叶形象？
 

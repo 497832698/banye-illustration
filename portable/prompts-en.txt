@@ -1,0 +1,288 @@
+# prompts-en.txt — 般叶配图 · 8 套服装完整英文提示词（可直接复制）
+#
+# 每套 = 身份锁 + 当前服装 + 风格 + 负向。复制对应那段，连同 3 张参考图一起发给生图工具即可。
+# 参考图：
+#   图1 身份锚  assets/ip/banye/reference-character.png
+#   图2 风格校准 assets/ip/banye/examples/quirky-sketch/banye-sample.png
+#   图3 服装参考 assets/ip/banye/outfits/{id}/reference.png
+# （白西装默认套可只用图1+图2，因设定图本身即白西装）
+
+================================================================
+# 1. white_suit · 白西装（默认）
+================================================================
+[IDENTITY — HIGHEST PRIORITY, keep EXACTLY even when clothing changes]
+Banye: chibi/cartoon character, head-to-body ratio about 1:1.3 (big-head proportion, roughly 2-3 heads tall, NOT normal adult proportion);
+silver-white SHORT regular hair, neat with slight layering (NOT long/flowing, NOT voluminous/wispy, NOT gold/yellow, NOT gray-washed);
+NO glasses;
+black winged eyeliner on upper lids, cool roguish "bad-boy handsome" look;
+gray/silver eyes;
+LEFT ear: exactly ONE small silver hoop; RIGHT ear: exactly FOUR small silver hoops (ASYMMETRIC — core identity signal, must be preserved);
+silver chain necklace on neck;
+round-soft boyish face;
+expressions alternate between exaggerated/dramatic and calm/quiet.
+
+[CURRENT OUTFIT — ONLY this part changes by keyword; default = white suit]
+Current outfit: cream/off-white suit set (jacket + trousers) + white inner top. Keep ALL identity anchors UNCHANGED and HIGHEST PRIORITY; ONLY the clothing differs.
+
+[STYLE — quirky hand-drawn sketch]
+quirky hand-drawn illustration, wobbly ink lines, expressive rough sketch, naive art style;
+black hand-drawn line structure for scene objects; white background, editorial doodle feeling;
+soft blue as main scene accent color (paths, buttons, key objects), soft orange on at most 2 small highlights (NOT object fills);
+recognizable concrete objects connected by clear story-flow arrows or path;
+allow 4-8 named objects when the message needs it — hierarchy via size and line weight, not more color fills;
+subject occupies 50-75% of frame, at least 25% white space, preferably one continuous empty block;
+changes shown with line marks not red-green color fills;
+no photorealistic, no smooth vector, no 3D render, no PPT infographic, no gradient, no cute cartoon, no colored label backgrounds, no large color-filled shapes.
+
+[NEGATIVE — avoid]
+NOT yellow / gold / gray-washed hair; keep silver-white SHORT regular hair (NOT long/flowing);
+NOT symmetric earrings — Banye is LEFT ear ONE hoop + RIGHT ear FOUR hoops (asymmetric);
+NOT missing the silver chain necklace;
+NOT normal adult body proportion — keep chibi big-head ~1:1.3;
+NOT glasses on Banye;
+scene accent colors must NOT tint, replace, or bleed into hair / suit / necklace.
+
+================================================================
+# 2. short_sleeve · 短袖
+================================================================
+[IDENTITY — HIGHEST PRIORITY, keep EXACTLY even when clothing changes]
+Banye: chibi/cartoon character, head-to-body ratio about 1:1.3 (big-head proportion, roughly 2-3 heads tall, NOT normal adult proportion);
+silver-white SHORT regular hair, neat with slight layering (NOT long/flowing, NOT voluminous/wispy, NOT gold/yellow, NOT gray-washed);
+NO glasses;
+black winged eyeliner on upper lids, cool roguish "bad-boy handsome" look;
+gray/silver eyes;
+LEFT ear: exactly ONE small silver hoop; RIGHT ear: exactly FOUR small silver hoops (ASYMMETRIC — core identity signal, must be preserved);
+silver chain necklace on neck;
+round-soft boyish face;
+expressions alternate between exaggerated/dramatic and calm/quiet.
+
+[CURRENT OUTFIT — ONLY this part changes by keyword; default = white suit]
+Current outfit: loose solid-color short-sleeve tee (light gray / black / white) + casual trousers or jeans. Keep ALL identity anchors UNCHANGED and HIGHEST PRIORITY; ONLY the clothing differs.
+
+[STYLE — quirky hand-drawn sketch]
+quirky hand-drawn illustration, wobbly ink lines, expressive rough sketch, naive art style;
+black hand-drawn line structure for scene objects; white background, editorial doodle feeling;
+soft blue as main scene accent color (paths, buttons, key objects), soft orange on at most 2 small highlights (NOT object fills);
+recognizable concrete objects connected by clear story-flow arrows or path;
+allow 4-8 named objects when the message needs it — hierarchy via size and line weight, not more color fills;
+subject occupies 50-75% of frame, at least 25% white space, preferably one continuous empty block;
+changes shown with line marks not red-green color fills;
+no photorealistic, no smooth vector, no 3D render, no PPT infographic, no gradient, no cute cartoon, no colored label backgrounds, no large color-filled shapes.
+
+[NEGATIVE — avoid]
+NOT yellow / gold / gray-washed hair; keep silver-white SHORT regular hair (NOT long/flowing);
+NOT symmetric earrings — Banye is LEFT ear ONE hoop + RIGHT ear FOUR hoops (asymmetric);
+NOT missing the silver chain necklace;
+NOT normal adult body proportion — keep chibi big-head ~1:1.3;
+NOT glasses on Banye;
+scene accent colors must NOT tint, replace, or bleed into hair / suit / necklace.
+
+================================================================
+# 3. vest · 背心
+================================================================
+[IDENTITY — HIGHEST PRIORITY, keep EXACTLY even when clothing changes]
+Banye: chibi/cartoon character, head-to-body ratio about 1:1.3 (big-head proportion, roughly 2-3 heads tall, NOT normal adult proportion);
+silver-white SHORT regular hair, neat with slight layering (NOT long/flowing, NOT voluminous/wispy, NOT gold/yellow, NOT gray-washed);
+NO glasses;
+black winged eyeliner on upper lids, cool roguish "bad-boy handsome" look;
+gray/silver eyes;
+LEFT ear: exactly ONE small silver hoop; RIGHT ear: exactly FOUR small silver hoops (ASYMMETRIC — core identity signal, must be preserved);
+silver chain necklace on neck;
+round-soft boyish face;
+expressions alternate between exaggerated/dramatic and calm/quiet.
+
+[CURRENT OUTFIT — ONLY this part changes by keyword; default = white suit]
+Current outfit: white or black tank top + sport shorts or wide-leg pants. Keep ALL identity anchors UNCHANGED and HIGHEST PRIORITY; ONLY the clothing differs.
+
+[STYLE — quirky hand-drawn sketch]
+quirky hand-drawn illustration, wobbly ink lines, expressive rough sketch, naive art style;
+black hand-drawn line structure for scene objects; white background, editorial doodle feeling;
+soft blue as main scene accent color (paths, buttons, key objects), soft orange on at most 2 small highlights (NOT object fills);
+recognizable concrete objects connected by clear story-flow arrows or path;
+allow 4-8 named objects when the message needs it — hierarchy via size and line weight, not more color fills;
+subject occupies 50-75% of frame, at least 25% white space, preferably one continuous empty block;
+changes shown with line marks not red-green color fills;
+no photorealistic, no smooth vector, no 3D render, no PPT infographic, no gradient, no cute cartoon, no colored label backgrounds, no large color-filled shapes.
+
+[NEGATIVE — avoid]
+NOT yellow / gold / gray-washed hair; keep silver-white SHORT regular hair (NOT long/flowing);
+NOT symmetric earrings — Banye is LEFT ear ONE hoop + RIGHT ear FOUR hoops (asymmetric);
+NOT missing the silver chain necklace;
+NOT normal adult body proportion — keep chibi big-head ~1:1.3;
+NOT glasses on Banye;
+scene accent colors must NOT tint, replace, or bleed into hair / suit / necklace.
+
+================================================================
+# 4. black_suit · 黑西装
+================================================================
+[IDENTITY — HIGHEST PRIORITY, keep EXACTLY even when clothing changes]
+Banye: chibi/cartoon character, head-to-body ratio about 1:1.3 (big-head proportion, roughly 2-3 heads tall, NOT normal adult proportion);
+silver-white SHORT regular hair, neat with slight layering (NOT long/flowing, NOT voluminous/wispy, NOT gold/yellow, NOT gray-washed);
+NO glasses;
+black winged eyeliner on upper lids, cool roguish "bad-boy handsome" look;
+gray/silver eyes;
+LEFT ear: exactly ONE small silver hoop; RIGHT ear: exactly FOUR small silver hoops (ASYMMETRIC — core identity signal, must be preserved);
+silver chain necklace on neck;
+round-soft boyish face;
+expressions alternate between exaggerated/dramatic and calm/quiet.
+
+[CURRENT OUTFIT — ONLY this part changes by keyword; default = white suit]
+Current outfit: all-black suit set (black jacket + black trousers) + black or white inner. Keep ALL identity anchors UNCHANGED and HIGHEST PRIORITY; ONLY the clothing differs.
+
+[STYLE — quirky hand-drawn sketch]
+quirky hand-drawn illustration, wobbly ink lines, expressive rough sketch, naive art style;
+black hand-drawn line structure for scene objects; white background, editorial doodle feeling;
+soft blue as main scene accent color (paths, buttons, key objects), soft orange on at most 2 small highlights (NOT object fills);
+recognizable concrete objects connected by clear story-flow arrows or path;
+allow 4-8 named objects when the message needs it — hierarchy via size and line weight, not more color fills;
+subject occupies 50-75% of frame, at least 25% white space, preferably one continuous empty block;
+changes shown with line marks not red-green color fills;
+no photorealistic, no smooth vector, no 3D render, no PPT infographic, no gradient, no cute cartoon, no colored label backgrounds, no large color-filled shapes.
+
+[NEGATIVE — avoid]
+NOT yellow / gold / gray-washed hair; keep silver-white SHORT regular hair (NOT long/flowing);
+NOT symmetric earrings — Banye is LEFT ear ONE hoop + RIGHT ear FOUR hoops (asymmetric);
+NOT missing the silver chain necklace;
+NOT normal adult body proportion — keep chibi big-head ~1:1.3;
+NOT glasses on Banye;
+scene accent colors must NOT tint, replace, or bleed into hair / suit / necklace.
+
+================================================================
+# 5. tuxedo · 礼服
+================================================================
+[IDENTITY — HIGHEST PRIORITY, keep EXACTLY even when clothing changes]
+Banye: chibi/cartoon character, head-to-body ratio about 1:1.3 (big-head proportion, roughly 2-3 heads tall, NOT normal adult proportion);
+silver-white SHORT regular hair, neat with slight layering (NOT long/flowing, NOT voluminous/wispy, NOT gold/yellow, NOT gray-washed);
+NO glasses;
+black winged eyeliner on upper lids, cool roguish "bad-boy handsome" look;
+gray/silver eyes;
+LEFT ear: exactly ONE small silver hoop; RIGHT ear: exactly FOUR small silver hoops (ASYMMETRIC — core identity signal, must be preserved);
+silver chain necklace on neck;
+round-soft boyish face;
+expressions alternate between exaggerated/dramatic and calm/quiet.
+
+[CURRENT OUTFIT — ONLY this part changes by keyword; default = white suit]
+Current outfit: black / navy velvet tuxedo set + bow tie or tie + leather shoes. Keep ALL identity anchors UNCHANGED and HIGHEST PRIORITY; ONLY the clothing differs.
+
+[STYLE — quirky hand-drawn sketch]
+quirky hand-drawn illustration, wobbly ink lines, expressive rough sketch, naive art style;
+black hand-drawn line structure for scene objects; white background, editorial doodle feeling;
+soft blue as main scene accent color (paths, buttons, key objects), soft orange on at most 2 small highlights (NOT object fills);
+recognizable concrete objects connected by clear story-flow arrows or path;
+allow 4-8 named objects when the message needs it — hierarchy via size and line weight, not more color fills;
+subject occupies 50-75% of frame, at least 25% white space, preferably one continuous empty block;
+changes shown with line marks not red-green color fills;
+no photorealistic, no smooth vector, no 3D render, no PPT infographic, no gradient, no cute cartoon, no colored label backgrounds, no large color-filled shapes.
+
+[NEGATIVE — avoid]
+NOT yellow / gold / gray-washed hair; keep silver-white SHORT regular hair (NOT long/flowing);
+NOT symmetric earrings — Banye is LEFT ear ONE hoop + RIGHT ear FOUR hoops (asymmetric);
+NOT missing the silver chain necklace;
+NOT normal adult body proportion — keep chibi big-head ~1:1.3;
+NOT glasses on Banye;
+scene accent colors must NOT tint, replace, or bleed into hair / suit / necklace.
+
+================================================================
+# 6. denim · 牛仔
+================================================================
+[IDENTITY — HIGHEST PRIORITY, keep EXACTLY even when clothing changes]
+Banye: chibi/cartoon character, head-to-body ratio about 1:1.3 (big-head proportion, roughly 2-3 heads tall, NOT normal adult proportion);
+silver-white SHORT regular hair, neat with slight layering (NOT long/flowing, NOT voluminous/wispy, NOT gold/yellow, NOT gray-washed);
+NO glasses;
+black winged eyeliner on upper lids, cool roguish "bad-boy handsome" look;
+gray/silver eyes;
+LEFT ear: exactly ONE small silver hoop; RIGHT ear: exactly FOUR small silver hoops (ASYMMETRIC — core identity signal, must be preserved);
+silver chain necklace on neck;
+round-soft boyish face;
+expressions alternate between exaggerated/dramatic and calm/quiet.
+
+[CURRENT OUTFIT — ONLY this part changes by keyword; default = white suit]
+Current outfit: denim jacket or denim shirt + denim jeans, full denim (can be worn / distressed). Keep ALL identity anchors UNCHANGED and HIGHEST PRIORITY; ONLY the clothing differs.
+
+[STYLE — quirky hand-drawn sketch]
+quirky hand-drawn illustration, wobbly ink lines, expressive rough sketch, naive art style;
+black hand-drawn line structure for scene objects; white background, editorial doodle feeling;
+soft blue as main scene accent color (paths, buttons, key objects), soft orange on at most 2 small highlights (NOT object fills);
+recognizable concrete objects connected by clear story-flow arrows or path;
+allow 4-8 named objects when the message needs it — hierarchy via size and line weight, not more color fills;
+subject occupies 50-75% of frame, at least 25% white space, preferably one continuous empty block;
+changes shown with line marks not red-green color fills;
+no photorealistic, no smooth vector, no 3D render, no PPT infographic, no gradient, no cute cartoon, no colored label backgrounds, no large color-filled shapes.
+
+[NEGATIVE — avoid]
+NOT yellow / gold / gray-washed hair; keep silver-white SHORT regular hair (NOT long/flowing);
+NOT symmetric earrings — Banye is LEFT ear ONE hoop + RIGHT ear FOUR hoops (asymmetric);
+NOT missing the silver chain necklace;
+NOT normal adult body proportion — keep chibi big-head ~1:1.3;
+NOT glasses on Banye;
+scene accent colors must NOT tint, replace, or bleed into hair / suit / necklace.
+
+================================================================
+# 7. korean · 韩系
+================================================================
+[IDENTITY — HIGHEST PRIORITY, keep EXACTLY even when clothing changes]
+Banye: chibi/cartoon character, head-to-body ratio about 1:1.3 (big-head proportion, roughly 2-3 heads tall, NOT normal adult proportion);
+silver-white SHORT regular hair, neat with slight layering (NOT long/flowing, NOT voluminous/wispy, NOT gold/yellow, NOT gray-washed);
+NO glasses;
+black winged eyeliner on upper lids, cool roguish "bad-boy handsome" look;
+gray/silver eyes;
+LEFT ear: exactly ONE small silver hoop; RIGHT ear: exactly FOUR small silver hoops (ASYMMETRIC — core identity signal, must be preserved);
+silver chain necklace on neck;
+round-soft boyish face;
+expressions alternate between exaggerated/dramatic and calm/quiet.
+
+[CURRENT OUTFIT — ONLY this part changes by keyword; default = white suit]
+Current outfit: beige knit cardigan + white tee + straight casual pants. Keep ALL identity anchors UNCHANGED and HIGHEST PRIORITY; ONLY the clothing differs.
+
+[STYLE — quirky hand-drawn sketch]
+quirky hand-drawn illustration, wobbly ink lines, expressive rough sketch, naive art style;
+black hand-drawn line structure for scene objects; white background, editorial doodle feeling;
+soft blue as main scene accent color (paths, buttons, key objects), soft orange on at most 2 small highlights (NOT object fills);
+recognizable concrete objects connected by clear story-flow arrows or path;
+allow 4-8 named objects when the message needs it — hierarchy via size and line weight, not more color fills;
+subject occupies 50-75% of frame, at least 25% white space, preferably one continuous empty block;
+changes shown with line marks not red-green color fills;
+no photorealistic, no smooth vector, no 3D render, no PPT infographic, no gradient, no cute cartoon, no colored label backgrounds, no large color-filled shapes.
+
+[NEGATIVE — avoid]
+NOT yellow / gold / gray-washed hair; keep silver-white SHORT regular hair (NOT long/flowing);
+NOT symmetric earrings — Banye is LEFT ear ONE hoop + RIGHT ear FOUR hoops (asymmetric);
+NOT missing the silver chain necklace;
+NOT normal adult body proportion — keep chibi big-head ~1:1.3;
+NOT glasses on Banye;
+scene accent colors must NOT tint, replace, or bleed into hair / suit / necklace.
+
+================================================================
+# 8. visual · 杀马特 / 视觉系
+================================================================
+[IDENTITY — HIGHEST PRIORITY, keep EXACTLY even when clothing changes]
+Banye: chibi/cartoon character, head-to-body ratio about 1:1.3 (big-head proportion, roughly 2-3 heads tall, NOT normal adult proportion);
+silver-white SHORT regular hair, neat with slight layering (NOT long/flowing, NOT voluminous/wispy, NOT gold/yellow, NOT gray-washed);
+NO glasses;
+black winged eyeliner on upper lids, cool roguish "bad-boy handsome" look;
+gray/silver eyes;
+LEFT ear: exactly ONE small silver hoop; RIGHT ear: exactly FOUR small silver hoops (ASYMMETRIC — core identity signal, must be preserved);
+silver chain necklace on neck;
+round-soft boyish face;
+expressions alternate between exaggerated/dramatic and calm/quiet.
+
+[CURRENT OUTFIT — ONLY this part changes by keyword; default = white suit]
+Current outfit: keep silver-white SHORT regular hair UNCHANGED (no teasing, no dye); black studded leather jacket or distressed hoodie + multiple metal chains + wristband + armband; heavier eye makeup. Keep ALL identity anchors UNCHANGED and HIGHEST PRIORITY; ONLY the clothing differs.
+
+[STYLE — quirky hand-drawn sketch]
+quirky hand-drawn illustration, wobbly ink lines, expressive rough sketch, naive art style;
+black hand-drawn line structure for scene objects; white background, editorial doodle feeling;
+soft blue as main scene accent color (paths, buttons, key objects), soft orange on at most 2 small highlights (NOT object fills);
+recognizable concrete objects connected by clear story-flow arrows or path;
+allow 4-8 named objects when the message needs it — hierarchy via size and line weight, not more color fills;
+subject occupies 50-75% of frame, at least 25% white space, preferably one continuous empty block;
+changes shown with line marks not red-green color fills;
+no photorealistic, no smooth vector, no 3D render, no PPT infographic, no gradient, no cute cartoon, no colored label backgrounds, no large color-filled shapes.
+
+[NEGATIVE — avoid]
+NOT yellow / gold / gray-washed hair; keep silver-white SHORT regular hair (NOT long/flowing);
+NOT symmetric earrings — Banye is LEFT ear ONE hoop + RIGHT ear FOUR hoops (asymmetric);
+NOT missing the silver chain necklace;
+NOT normal adult body proportion — keep chibi big-head ~1:1.3;
+NOT glasses on Banye;
+scene accent colors must NOT tint, replace, or bleed into hair / suit / necklace.
