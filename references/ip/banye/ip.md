@@ -27,7 +27,7 @@
 ## 锚点（6 个，丢任一个就不算般叶）
 
 1. **银白普通短发**：及耳/颌线的普通清爽短发，顺贴有轻微层次与刘海，不飘逸不炸毛（非长发、非蓬松飘逸、非金发）
-2. **多套穿搭（衣橱库见下）**：白西装(默认)/短袖/背心/黑西装/礼服/牛仔/流行/韩系/杀马特；**仅衣服变化，发色与配饰(银发/不对称耳环/项链)永远不变**
+2. **多套穿搭（衣橱库见下）**：白西装(默认)/短袖/背心/黑西装/礼服/牛仔/韩系/杀马特；**仅衣服变化，发色与配饰(银发/不对称耳环/项链)永远不变**
 3. **不对称银环 + 项链**：**不戴眼镜**；左耳 **1 枚**小银环、右耳 **4 枚**小银环（左右不对称是核心识别点）；银色链条项链
 4. **Q 版大头比例**：头身比约 **1:1.3**（约 2–3 头身），非成人正常比例
 5. **黑色眼线**：上挑黑色眼线，强化「瘾帅」冷感
@@ -50,7 +50,6 @@
 | black_suit | 黑西装 | 黑西装/黑色西装/暗黑西装 | 全黑西装套装（黑外套+黑西裤）+黑或白内搭 | assets/ip/banye/outfits/black_suit/reference.png | ✅ 已入库 |
 | tuxedo | 礼服 | 礼服/正装/燕尾服/晚礼服 | 黑色/藏青丝绒礼服套装+领结或领带+皮鞋 | assets/ip/banye/outfits/tuxedo/reference.png | ✅ 已入库 |
 | denim | 牛仔 | 牛仔/丹宁/美式休闲 | 牛仔外套或牛仔衬衫+牛仔裤全牛仔（可做旧） | assets/ip/banye/outfits/denim/reference.png | ✅ 已入库 |
-| street | 流行/潮流 | 流行/潮流/街头/hiphop/潮牌 | 宽松oversize卫衣+工装裤+运动鞋；可加棒球帽 | assets/ip/banye/outfits/street/reference.png | 待补 |
 | korean | 韩系 | 韩系/韩风/清爽/温柔 | 米色针织开衫+白T+直筒休闲裤 | assets/ip/banye/outfits/korean/reference.png | ✅ 已入库 |
 | visual | 杀马特/视觉系 | 杀马特/视觉系/视觉/夸张 | 发型保持普通银白短发不变（不炸毛不染色）+黑色铆钉皮衣或破洞卫衣+多层金属链+护腕+臂环；眼妆加重 | assets/ip/banye/outfits/visual/reference.png | ✅ 已入库 |
 
@@ -74,7 +73,7 @@ gray/silver eyes;
 LEFT ear: exactly ONE small silver hoop; RIGHT ear: exactly FOUR small silver hoops (ASYMMETRIC — core identity signal, must be preserved);
 silver chain necklace on neck;
 face shape: round-soft boyish face;
-outfits (multiple, see 衣橱库): white suit (default), short-sleeve tee, tank top, black suit, tuxedo, denim, streetwear, Korean-casual, shamate/scene; CURRENT OUTFIT is chosen by user keyword (default = white suit); ONLY the clothing differs — anchors above NEVER change;
+outfits (multiple, see 衣橱库): white suit (default), short-sleeve tee, tank top, black suit, tuxedo, denim, Korean-casual, shamate/scene; CURRENT OUTFIT is chosen by user keyword (default = white suit); ONLY the clothing differs — anchors above NEVER change;
 expressions alternate between exaggerated/dramatic and calm/quiet.
 Keep exact hairstyle, earring count and placement, necklace, face shape, and proportions from reference; only outlines become sketchy.
 ```

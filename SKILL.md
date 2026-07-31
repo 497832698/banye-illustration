@@ -23,7 +23,7 @@ description: >
 - 角色：般叶（Banye），「痞帅的设计师」，Q 版大头（头身比约 1:1.3）
 - 银白普通短发（不飘逸）、不戴眼镜、黑色上挑眼线
 - 左耳 1 枚银环 + 右耳 4 枚银环（不对称核心识别点）+ 银色链条项链
-- 默认白色西装套装；多套穿搭见「衣橱库」（`references/ip/banye/ip.md`，共 9 套：白西装 / 短袖 / 背心 / 黑西装 / 礼服 / 牛仔 / 流行 / 韩系 / 杀马特；当前 8/9 已入库）
+- 默认白色西装套装；多套穿搭见「衣橱库」（`references/ip/banye/ip.md`，共 8 套：白西装 / 短袖 / 背心 / 黑西装 / 礼服 / 牛仔 / 韩系 / 杀马特；全部已入库）
 - 全部锚点、锁色、动作库见 `references/ip/banye/ip.md`
 
 每次生图都会自动加载般叶的设定图 + 校准图 + 锚点，**无需指定角色**。
@@ -42,7 +42,6 @@ description: >
 | 般叶穿黑西装 | 黑西装 | `outfits/black_suit/reference.png` |
 | 般叶穿礼服 | 礼服 | `outfits/tuxedo/reference.png` |
 | 般叶牛仔风 | 牛仔 | `outfits/denim/reference.png` |
-| 般叶潮流/流行 | 流行 | `outfits/street/reference.png` |
 | 般叶韩系 | 韩系 | `outfits/korean/reference.png` |
 | 般叶杀马特 | 杀马特/视觉系 | `outfits/visual/reference.png` |
 
